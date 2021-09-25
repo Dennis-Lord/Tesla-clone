@@ -2,13 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade'
 
-function Section({ title, description, backgroundImg, leftBtnText, rightBtnText }) {
+function Section({ title, description, link, backgroundImg, leftBtnText, rightBtnText }) {
     return ( 
         <Wrap bgImg={backgroundImg}>
             <Fade bottom>
                 <ItemText>
                     <h1>{title}</h1>
-                    <p>{description}</p>
+                    <p>{description}<a href="#">{link}</a></p>
                 </ItemText>
             </Fade>
             <Buttons>
@@ -45,6 +45,10 @@ const Wrap = styled.div`
 const ItemText = styled.div` 
     padding-top: 15vh;
     text-align: center;
+
+    p a {
+        text-decoration: underline;
+    }    
 `
 
 const ButtonGroup = styled.div`

@@ -54,6 +54,12 @@ const Container = styled.div`
     left: 0;
     right: 0;
     z-index: 1;
+
+    a {
+        img {
+            height: 17px;
+        }
+    }
 `
 
 const Menu = styled.div`
@@ -64,6 +70,7 @@ const Menu = styled.div`
 
     a {
         font-weight: 600;
+        font-size: 15px;
         text-transform: uppercase;
         padding: 0 10px;
         flex-wrap: no wrap;
@@ -80,6 +87,7 @@ const RightMenu = styled.div`
 
     a {
         font-weight: 600;
+        font-size: 15px;
         text-transform: uppercase;
         margin-right: 10px;
     }
@@ -96,7 +104,6 @@ const BurgerNav = styled.div`
     right: 0;
     background-color: white;
     width: 300px;
-    border-radius: 0 0 0 15px;
     z-index: 2; //16
     list-style: none;
     padding: 20px;
@@ -104,14 +111,16 @@ const BurgerNav = styled.div`
     flex-direction: column;
     text-align: left;
     transform: ${props => props.show ? `translateX(0)` : `translateX(100%)` };
-    transition: transform 0.3s ease-in;
+    transition: transform 0.2s ease-in;
 
     li {
         padding: 15px 0;
         border-bottom: 1px solid rgba(0, 0, 0, .2);
 
         a {
+            font-size: 12px;
             font-weight: 600;
+            text-transform: uppercase;
         }
     }
 `
